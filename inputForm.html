@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        body{
+            background-image: linear-gradient(to right, #db85a0,#b396b0,#b396b0,rgb(126, 126, 210));
+        }
+        .try{
+            margin-bottom: 45px;
+            margin-top: 40px;
+            width: 150px;
+            height: 50px;
+        }
+        .try:hover{
+            height: 50px;
+            width: 200px;
+            border: none;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-warning text-center mb-2"><i>Payment Tracker</i></h1>
+    <form class="col g-3 needs-validation" novalidate id="dataForm" action="/" method="post">
+        <div class="row-md-4 p-2 text-start w-100">
+            <label for="cn" class="form-label ms-2"><b class="text-danger star">* </b><b>Company Name</b></label>
+            <div class="input-group has-validation">
+                <input type="text" class="form-control move" id="cn" name="cn" required placeholder="Please enter your Client name">
+                <div class="invalid-feedback ms-1">
+                    <h6>Client name is required</h6>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex mb-3 ms-2 me-2">
+            <div class="row-md-4 p-2 text-start w-50">
+                <label for="name" class="form-label ms-2"><b class="text-danger star">* </b><b>Name</b></label>
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control move" id="name" name="name" required placeholder="Please enter your Name">
+                    <div class="invalid-feedback ms-1">
+                        <h6>Name is required</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start w-50">
+                <label for="cf" class="form-label ms-2"><b class="text-danger star">* </b><b>Carry Forward leaves</b></label>
+                <div class="input-group has-validation">
+                    <input type="text" class="form-control move" id="cf" name="cf" required placeholder="Please enter your carry forward leaves">
+                    <div class="invalid-feedback ms-1">
+                        <h6>This field is required</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3 class="text-light ms-3"><i>Arranged Leaves</i></h3>
+        <div class="d-flex">
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="jan" class="form-label ms-2"><b>January</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="jan" name="jan" placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="feb" class="form-label ms-2"><b>February</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="feb" name="feb"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="mar" class="form-label ms-2"><b>March</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="mar" name="mar"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="apr" class="form-label ms-2"><b>April</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="apr" name="apr"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="may" class="form-label ms-2"><b>May</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="may" name="may"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="jun" class="form-label ms-2"><b>June</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="jun" name="jun"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="jul" class="form-label ms-2"><b>July</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="jul" name="jul"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="aug" class="form-label ms-2"><b>August</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="aug" name="aug"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="sep" class="form-label ms-2"><b>September</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="sep" name="sep"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="oct" class="form-label ms-2"><b>October</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="oct" name="oct"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="nov" class="form-label ms-2"><b>November</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="nov" name="nov"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="dec" class="form-label ms-2"><b>December</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="dec" name="dec"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+        </div>
+        <h3 class="text-light ms-3 mt-4"><i>Medical Leaves</i></h3>
+        <div class="d-flex">
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="jan-ml" class="form-label ms-2"><b>January</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="jan_ml" name="jan_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="feb_ml" class="form-label ms-2"><b>February</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="feb_ml" name="feb_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="mar_ml" class="form-label ms-2"><b>March</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="mar_ml" name="mar_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="apr_ml" class="form-label ms-2"><b>April</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="apr_ml" name="apr_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="may_ml" class="form-label ms-2"><b>May</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="may_ml" name="may_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="jun_ml" class="form-label ms-2"><b>June</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="jun_ml" name="jun_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+        </div>
+        <div class="d-flex">
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="jul_ml" class="form-label ms-2"><b>July</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="jul_ml" name="jul_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="aug_ml" class="form-label ms-2"><b>August</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="aug_ml" name="aug_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="sep_ml" class="form-label ms-2"><b>September</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="sep_ml" name="sep_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="oct_ml" class="form-label ms-2"><b>October</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="oct_ml" name="oct_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="nov_ml" class="form-label ms-2"><b>November</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="nov_ml" name="nov_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+            <div class="row-md-4 p-2 text-start ms-4">
+                <label for="dec_ml" class="form-label ms-2"><b>December</b></label>
+                <div class="input-group has-validation">
+                    <input type="number" class="form-control move" id="dec_ml" name="dec_ml"  placeholder="Please enter leaves taken">
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-danger try" type="submit" onclick="submitAll()" >Submit</button>
+        </div>
+    </form>
+</body>
+<script src="script.js"></script>
+<script>
+    function submitAll(){
+        let jan = document.getElementById("jan").value;
+        let feb = document.getElementById("feb").value;
+        let mar = document.getElementById("mar").value;
+        let apr = document.getElementById("apr").value;
+        let may = document.getElementById("may").value;
+        let jun = document.getElementById("jun").value;
+        let jul = document.getElementById("jul").value;
+        let aug = document.getElementById("aug").value;
+        let sep = document.getElementById("sep").value;
+        let oct = document.getElementById("oct").value;
+        let nov = document.getElementById("nov").value;
+        let dec = document.getElementById("dec").value;
+        let jan_ml = document.getElementById("jan-ml").value;
+        let feb_ml = document.getElementById("feb-ml").value;
+        let mar_ml = document.getElementById("mar-ml").value;
+        let apr_ml = document.getElementById("apr-ml").value;
+        let may_ml = document.getElementById("may-ml").value;
+        let jun_ml = document.getElementById("jun-ml").value;
+        let jul_ml = document.getElementById("jul-ml").value;
+        let aug_ml = document.getElementById("aug-ml").value;
+        let sep_ml = document.getElementById("sep-ml").value;
+        let oct_ml = document.getElementById("oct-ml").value;
+        let nov_ml = document.getElementById("nov-ml").value;
+        let dec_ml = document.getElementById("dec-ml").value;
+        let cf = document.getElementById("cf").value;
+        if(jan===null||jan===NaN||jan===""){
+            jan = parseInt(0);
+        }
+        if(feb===null||feb===NaN||feb===""){
+            feb = parseInt(0);
+        }
+        if(mar===null||mar===NaN||mar===""){
+            mar = parseInt(0);
+        }
+        if(apr===null||apr===NaN||apr===""){
+            apr = parseInt(0);
+        }
+        if(may===null||may===NaN||may===""){
+            may = parseInt(0);
+        }
+        if(jun===null||jun===NaN||jun===""){
+            jun = parseInt(0);
+        }
+        if(jul===null||jul===NaN||jul===""){
+            jul = parseInt(0);
+        }
+        if(aug===null||aug===NaN||aug===""){
+            aug = parseInt(0);
+        }
+        if(sep===null||sep===NaN||sep===""){
+            sep = parseInt(0);
+        }
+        if(oct===null||oct===NaN||oct===""){
+            oct = parseInt(0);
+        }
+        if(nov===null||nov===NaN||nov===""){
+            nov = parseInt(0);
+        }
+        if(dec===null||dec===NaN||dec===""){
+            dec = parseInt(0);
+        }
+        if(jan_ml===null||jan_ml===NaN||jan_ml===""){
+            jan_ml = parseInt(0);
+        }
+        if(feb_ml===null||feb_ml===NaN||feb_ml===""){
+            feb_ml = parseInt(0);
+        }
+        if(mar_ml===null||mar_ml===NaN||mar_ml===""){
+            mar_ml = parseInt(0);
+        }
+        if(apr_ml===null||apr_ml===NaN||apr_ml===""){
+            apr_ml = parseInt(0);
+        }
+        if(may_ml===null||may_ml===NaN||may_ml===""){
+            may_ml = parseInt(0);
+        }
+        if(jun_ml===null||jun_ml===NaN||jun_ml===""){
+            jun_ml = parseInt(0);
+        }
+        if(jul_ml===null||jul_ml===NaN||jul_ml===""){
+            jul_ml = parseInt(0);
+        }
+        if(aug_ml===null||aug_ml===NaN||aug_ml===""){
+            aug_ml = parseInt(0);
+        }
+        if(sep_ml===null||sep_ml===NaN||sep_ml===""){
+            sep_ml = parseInt(0);
+        }
+        if(oct_ml===null||oct_ml===NaN||oct_ml===""){
+            oct_ml = parseInt(0);
+        }
+        if(nov_ml===null||nov_ml===NaN||nov_ml===""){
+            nov_ml = parseInt(0);
+        }
+        if(dec_ml===null||dec_ml===NaN||dec_ml===""){
+            dec_ml = parseInt(0);
+        }
+        const al = parseInt(jan)+parseInt(feb)+parseInt(mar)+parseInt(apr)+parseInt(may)+parseInt(jun)+parseInt(jul)+parseInt(aug)+parseInt(sep)+parseInt(oct)+parseInt(nov)+parseInt(dec);
+        const remainingAlLeaves = cf-al+12;
+        const ml = jan_ml+feb_ml+mar_ml+apr_ml+may_ml+jun_ml+jul_ml+aug_ml+sep_ml+oct_ml+nov_ml+dec_ml;
+        console.log(remainingAlLeaves);
+    }
+</script>
+<script>
+    (function () {
+    'use strict'
+    var forms = document.querySelectorAll('.needs-validation')
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+        }, false)
+        })
+    })()
+</script>
+<script>
+    $(function(){
+    var keyLeft = 37;
+    var keyRight = 39;
+    var keyUp = 38;
+    var keyDown = 40;
+    $(document).keydown(
+        function(e)
+        {
+            var moves = $(".move");
+            if (e.keyCode == keyRight) {
+                for(i = 0; i <= moves.length; i++) {
+                    if (moves[i] == $(".move:focus").get(0)) {
+                       $(moves[i + 1]).focus();
+                        break;
+                    }
+                }
+            }
+            if (e.keyCode == keyLeft) {
+                for(i = 0; i <= moves.length; i++) {
+                    if (moves[i] == $(".move:focus").get(0)) {
+                       $(moves[i - 1]).focus();
+                        break;
+                    }
+                }
+            }
+            if (e.keyCode == keyDown) {
+                for(i = 0; i <= moves.length; i++) {
+                    if (moves[i] == $(".move:focus").get(0)) {
+                       $(moves[i + 6]).focus();
+                        break;
+                    }
+                }
+            }
+            if (e.keyCode == keyUp) {
+                for(i = 0; i <= moves.length; i++) {
+                    if (moves[i] == $(".move:focus").get(0)) {
+                       $(moves[i - 6]).focus();
+                        break;
+                    }
+                }
+            }
+        }
+    );
+});
+</script>
+</html>
